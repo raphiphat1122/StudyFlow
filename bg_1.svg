@@ -1,0 +1,205 @@
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="100%" height="100%"
+     viewBox="0 0 1536 2048"
+     preserveAspectRatio="xMidYMid slice">
+
+  <title>Pastel Dreamy Sky Background</title>
+
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0.8" y2="1">
+      <stop offset="0%" stop-color="#f0eafa"/>
+      <stop offset="38%" stop-color="#f5effb"/>
+      <stop offset="72%" stop-color="#f9f0f7"/>
+      <stop offset="100%" stop-color="#fff0e9"/>
+    </linearGradient>
+
+    <radialGradient id="lavenderGlow">
+      <stop offset="0%" stop-color="#d9cafa" stop-opacity=".7"/>
+      <stop offset="100%" stop-color="#e7ddfa" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="peachGlow">
+      <stop offset="0%" stop-color="#ffe0bd" stop-opacity=".7"/>
+      <stop offset="100%" stop-color="#ffe6d3" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="cloud" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fffdfb" stop-opacity=".92"/>
+      <stop offset="100%" stop-color="#f8eefa" stop-opacity=".45"/>
+    </linearGradient>
+
+    <linearGradient id="orangeStar" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffdda1"/>
+      <stop offset="100%" stop-color="#ffb76f"/>
+    </linearGradient>
+
+    <linearGradient id="purpleStar" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d7c5f8"/>
+      <stop offset="100%" stop-color="#b7a0e9"/>
+    </linearGradient>
+
+    <filter id="softBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="32"/>
+    </filter>
+
+    <filter id="cloudBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="15"/>
+    </filter>
+
+    <filter id="starGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="13"/>
+    </filter>
+
+    <g id="star">
+      <path d="M 0,-50
+               C 9,-50 15,-19 25,-13
+               C 32,-7 50,-9 50,0
+               C 50,9 24,16 17,25
+               C 10,34 9,50 0,50
+               C -9,50 -15,22 -24,14
+               C -33,6 -50,9 -50,0
+               C -50,-9 -22,-16 -15,-25
+               C -8,-34 -9,-50 0,-50 Z"/>
+    </g>
+  </defs>
+
+  <style>
+    .sky { fill: url(#sky); }
+    .lavender { fill: url(#lavenderGlow); }
+    .peach { fill: url(#peachGlow); }
+    .cloud { fill: url(#cloud); }
+    .orange-star { fill: url(#orangeStar); }
+    .purple-star { fill: url(#purpleStar); }
+
+    @media (prefers-color-scheme: dark) {
+      .sky {
+        fill: #171626;
+      }
+      .lavender {
+        opacity: .55;
+      }
+      .peach {
+        opacity: .25;
+      }
+      .cloud {
+        fill: #77708f;
+        opacity: .24;
+      }
+      .orange-star {
+        fill: #ffc477;
+      }
+      .purple-star {
+        fill: #a99bdf;
+      }
+    }
+  </style>
+
+  <!-- Background -->
+  <rect class="sky" width="1536" height="2048" rx="42"/>
+
+  <!-- Soft atmospheric color -->
+  <ellipse class="lavender"
+           cx="680" cy="520" rx="850" ry="700"/>
+  <ellipse class="peach"
+           cx="400" cy="1600" rx="850" ry="520"/>
+  <ellipse class="lavender"
+           cx="1350" cy="1200" rx="520" ry="850"/>
+
+  <!-- Diffused sky clouds -->
+  <g filter="url(#softBlur)" opacity=".75">
+    <ellipse cx="420" cy="450" rx="430" ry="180"
+             fill="#fffaf7"/>
+    <ellipse cx="1110" cy="540" rx="440" ry="170"
+             fill="#e9e1fb"/>
+    <ellipse cx="780" cy="950" rx="560" ry="240"
+             fill="#f5efff"/>
+    <ellipse cx="330" cy="1320" rx="460" ry="200"
+             fill="#fff5ed"/>
+    <ellipse cx="1150" cy="1510" rx="520" ry="250"
+             fill="#f0e7fa"/>
+    <ellipse cx="700" cy="1870" rx="650" ry="220"
+             fill="#fff1e8"/>
+  </g>
+
+  <!-- Left cloud formations -->
+  <g class="cloud" filter="url(#cloudBlur)">
+    <path d="M-150 620
+             C-110 520 -45 490 30 510
+             C35 425 105 390 170 425
+             C235 455 250 530 285 550
+             C360 525 420 565 440 625
+             C475 690 420 745 345 740
+             L-100 745 Z"/>
+    <path d="M-120 1470
+             C-90 1380 -20 1360 45 1390
+             C70 1300 145 1285 205 1325
+             C270 1365 280 1425 325 1440
+             C390 1420 445 1470 450 1520
+             L-120 1560 Z"/>
+  </g>
+
+  <!-- Right cloud formations -->
+  <g class="cloud" filter="url(#cloudBlur)">
+    <path d="M1100 700
+             C1125 640 1185 620 1235 645
+             C1265 570 1340 555 1390 600
+             C1440 635 1455 690 1505 695
+             C1565 700 1600 755 1570 810
+             L1120 815 Z"/>
+    <path d="M1120 1320
+             C1150 1240 1220 1220 1270 1250
+             C1305 1160 1380 1155 1430 1200
+             C1480 1240 1490 1300 1540 1315
+             L1570 1450 L1100 1440 Z"/>
+    <path d="M1170 1830
+             C1200 1760 1260 1745 1310 1775
+             C1350 1695 1410 1690 1460 1735
+             C1500 1770 1525 1815 1570 1820
+             L1570 1970 L1140 1950 Z"/>
+  </g>
+
+  <!-- Floating pastel light -->
+  <g filter="url(#softBlur)" opacity=".5">
+    <circle cx="345" cy="330" r="22" fill="#fff5d9"/>
+    <circle cx="1130" cy="820" r="28" fill="#ffffff"/>
+    <circle cx="570" cy="1130" r="20" fill="#fff0d9"/>
+    <circle cx="1260" cy="1530" r="32" fill="#f8e5ff"/>
+    <circle cx="250" cy="1770" r="26" fill="#ffe8d9"/>
+  </g>
+
+  <!-- Tiny dreamy sparkles -->
+  <g fill="#c8b5e8" opacity=".25" filter="url(#cloudBlur)">
+    <circle cx="120" cy="300" r="18"/>
+    <circle cx="400" cy="180" r="14"/>
+    <circle cx="235" cy="460" r="12"/>
+    <circle cx="1320" cy="370" r="16"/>
+    <circle cx="1440" cy="1550" r="14"/>
+    <circle cx="370" cy="1930" r="12"/>
+  </g>
+
+  <!-- Main orange star -->
+  <g transform="translate(1135 355)">
+    <use href="#star" class="orange-star"
+         transform="scale(1.15)"
+         opacity=".45" filter="url(#starGlow)"/>
+    <use href="#star" class="orange-star"
+         transform="scale(.72)"/>
+  </g>
+
+  <!-- Bottom left orange sparkle -->
+  <g transform="translate(125 1950) scale(.48)">
+    <use href="#star" class="orange-star" opacity=".6"/>
+  </g>
+
+  <!-- Bottom right lavender star -->
+  <g transform="translate(1315 1980) scale(.75)">
+    <use href="#star" class="purple-star"/>
+  </g>
+
+  <!-- Subtle lower horizon haze -->
+  <ellipse cx="760" cy="2050" rx="900" ry="170"
+           fill="#fff3eb" opacity=".35"
+           filter="url(#softBlur)"/>
+
+</svg>

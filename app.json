@@ -1,0 +1,40 @@
+{
+  "expo": {
+    "name": "StudyFlow",
+    "slug": "studyflow",
+    "version": "1.0.0",
+    "scheme": "studyflow",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "icon": "./assets/icon.png",
+    "android": {
+      "package": "com.example.studyflow",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#FAF8FF"
+      }
+    },
+    "ios": {
+      "bundleIdentifier": "com.example.studyflow",
+      "supportsTablet": true
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      "expo-localization",
+      "expo-status-bar",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash.png",
+          "imageWidth": 220,
+          "resizeMode": "contain",
+          "backgroundColor": "#FAF8FF"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
