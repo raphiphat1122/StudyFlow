@@ -15,7 +15,7 @@ function Gate() {
   const [fontsLoaded, fontError] = useFonts({ 'Mali-Regular': require('../assets/fonts/Mali-Regular.ttf'), 'Mali-Medium': require('../assets/fonts/Mali-Medium.ttf'), 'Mali-SemiBold': require('../assets/fonts/Mali-SemiBold.ttf'), 'Mali-Bold': require('../assets/fonts/Mali-Bold.ttf') });
   const ok = ready && (fontsLoaded || !!fontError);
   useEffect(() => { if (ok) void SplashScreen.hideAsync(); }, [ok]);
-  useEffect(() => { if (!ok) return; const onOnb = segs[0] === 'onboarding';
+  useEffect(() => { if (!ok) return; const onOnb = ['onboarding', 'register', 'forgot-password', 'otp'].includes(segs[0] as string);
     if (!settings.onboarded && !onOnb) router.replace('/onboarding'); else if (settings.onboarded && onOnb) router.replace('/'); }, [ok, settings.onboarded, segs, router]);
   if (!ok) return null;
   return <><StatusBar style={isDark ? 'light' : 'dark'} /><Stack screenOptions={{ headerShown: false, contentStyle: { backgroundColor: colors.background }, animation: 'fade' }}>
